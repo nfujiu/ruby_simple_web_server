@@ -5,8 +5,9 @@ module RubySimpleWebServer
 
     def initialize(argv)
       @argv = argv.dup
+      @conf = nil
 
-      @launcher = RubySimpleWebServer::Launcher.new
+      @launcher = RubySimpleWebServer::Launcher.new(@conf)
     end
 
     def run

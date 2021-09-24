@@ -1,7 +1,13 @@
 module RubySimpleWebServer
   class Launcher
+
+    def initialize(conf)
+      @config = conf
+      @runner = RubySimpleWebServer::Runner.new
+    end
+
     def run
-      # Launcher
+      @runner.run
     end
   end
 end
