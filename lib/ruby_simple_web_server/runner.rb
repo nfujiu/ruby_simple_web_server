@@ -10,8 +10,21 @@ module RubySimpleWebServer
     private
 
     def start_server
-      server = RubySimpleWebServer::Server.new
+
+
+      p application
+
+      server = RubySimpleWebServer::Server.new(app)
       server
+    end
+
+
+    private
+
+    def app
+      Rack::Builder.new do
+        run lambda { |env| [200, {"Content-Type" => "text/plain"}, ["Hello World"]] }
+      end
     end
   end
 end

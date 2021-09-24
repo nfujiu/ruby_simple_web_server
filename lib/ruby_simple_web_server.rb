@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require "rack"
+require "socket"
+require "uri"
+
 require_relative "ruby_simple_web_server/version"
 require_relative "ruby_simple_web_server/logger"
 require_relative "ruby_simple_web_server/cli"
