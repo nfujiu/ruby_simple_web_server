@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
 require "ruby_simple_web_server"
+
+cli = RubySimpleWebServer::CLI.new ARGV
+
+cli.run
