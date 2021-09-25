@@ -1,4 +1,5 @@
 require "socket"
+require "ruby_simple_web_server/request"
 
 module RubySimpleWebServer
   class Server
