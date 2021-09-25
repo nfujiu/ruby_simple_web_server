@@ -4,9 +4,7 @@ module RubySimpleWebServer
     attr_accessor :launcher
 
     def initialize(argv)
-      @argv = argv.dup
-      @conf = nil
-
+      @argv = @conf = argv.dup
       @launcher = RubySimpleWebServer::Launcher.new(@conf)
     end
 

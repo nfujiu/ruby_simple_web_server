@@ -3,7 +3,7 @@ module RubySimpleWebServer
 
     def initialize(conf)
       @config = conf
-      @runner = RubySimpleWebServer::Runner.new
+      @runner = RubySimpleWebServer::Runner.new(@config)
     end
 
     def run
